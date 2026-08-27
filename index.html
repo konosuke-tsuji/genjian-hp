@@ -4,200 +4,192 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>グループホーム源氏庵｜伊豆の国市・韮山の認知症グループホーム（看取り対応・見学受付中）</title>
-<meta name="description" content="伊豆の国市四日町のグループホーム源氏庵。開設20年以上、認知症の方が9名1ユニットで家庭的に暮らせる住まいです。看取りにも対応。韮山駅近く・マックスバリュ韮山店隣。見学・ご相談はお電話またはメールで。">
+<meta name="description" content="伊豆の国市四日町のグループホーム源氏庵。開設20年以上、認知症の方が9名1ユニットで、自然に・穏やかに暮らせる住まいです。看取りに対応し、看護職員を配置。田園から富士山を望む、地域密着のグループホームです。">
 <meta name="keywords" content="グループホーム,伊豆の国市,韮山,認知症,介護,看取り,源氏庵">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@500;600;700;800&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&family=BIZ+UDPMincho:wght@400;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --paper:#F7F4ED;      /* 生成りの紙 */
-    --paper-2:#EFE9DC;    /* 少し濃い紙 */
-    --ink:#201E1A;        /* 温かい墨黒 */
-    --ink-soft:#403A32;
-    --sub:#6E675B;        /* 本文サブ */
-    --accent:#B4741E;     /* 山吹・琥珀（温かみのアクセント） */
-    --accent-2:#8A5514;
-    --line:#DFD8C8;
-    --paper-on-ink:#EDE7D9;
-    --sub-on-ink:#A79E8C;
+    --paper:#FFFFFF;      /* 背景（白） */
+    --paper-2:#F6F1E7;    /* 写真枠などの下地 */
+    --ink:#2E2823;        /* 文字（濃い焦茶＝ほぼ黒） */
+    --ink-soft:#5A4E42;
+    --sub:#6E6154;        /* 本文サブ */
+    --accent:#DD8A34;     /* 夕日のオレンジ */
+    --accent-2:#BE6A1E;   /* 深い夕日 */
+    --green:#6E8B4E;      /* 田園の緑 */
+    --green-deep:#42542F; /* 深い田園 */
+    --sky:#7096AE;        /* 富士の空の青 */
+    --line:#DED7C9;       /* 罫線（淡い） */
+    --border-dark:#2E2823;/* 引き締めの黒線 */
+    --paper-on-dark:#F6F0E2;
+    --sub-on-dark:#CDBFA3;
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
   body{
-    font-family:"Noto Sans JP",sans-serif;color:var(--ink);background:var(--paper);
-    line-height:1.9;font-size:16px;-webkit-font-smoothing:antialiased;
+    font-family:"BIZ UDPGothic",sans-serif;color:var(--ink);background:var(--paper);
+    line-height:1.78;font-size:16px;font-weight:400;-webkit-font-smoothing:antialiased;
   }
-  h1,h2,h3{font-family:"Shippori Mincho",serif;line-height:1.4;font-weight:600}
+  h1,h2,h3{font-family:"BIZ UDPMincho",serif;line-height:1.5;font-weight:700;text-wrap:balance}
+  p{text-wrap:pretty}
+  body{line-break:strict;word-break:normal;overflow-wrap:normal}
   a{color:inherit;text-decoration:none}
-  .wrap{max-width:1140px;margin:0 auto;padding:0 32px}
-  .eyebrow{
-    font-family:"Space Grotesk",sans-serif;font-weight:500;letter-spacing:.22em;
-    text-transform:uppercase;font-size:.72rem;color:var(--accent);
-    display:flex;align-items:center;gap:12px;margin-bottom:20px;
-  }
-  .eyebrow::before{content:"";width:28px;height:1px;background:var(--accent)}
-  .eyebrow.center{justify-content:center}
-  .btn{
-    display:inline-flex;align-items:center;gap:10px;background:var(--ink);color:var(--paper);
-    font-weight:500;font-size:.9rem;padding:15px 30px;border-radius:2px;
-    transition:background .25s,transform .25s;border:none;cursor:pointer;
-    font-family:"Noto Sans JP",sans-serif;
-  }
-  .btn:hover{background:var(--accent-2);transform:translateY(-2px)}
-  .btn .en{font-family:"Space Grotesk",sans-serif;letter-spacing:.1em;font-size:.75rem;opacity:.7}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 28px}
 
-  /* reveal */
-  .reveal{opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s ease}
-  .reveal.in{opacity:1;transform:none}
-  @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+  /* 見出しラベル（色で囲った小さなタグ） */
+  .label{display:inline-block;background:var(--accent-2);color:#fff;border:1px solid var(--border-dark);
+    font-family:"BIZ UDPGothic",sans-serif;font-weight:700;font-size:.8rem;letter-spacing:.08em;
+    padding:4px 14px;border-radius:3px;margin-bottom:16px}
+
+  .btn{
+    display:inline-flex;align-items:center;gap:8px;background:var(--accent-2);color:#fff;
+    font-family:"BIZ UDPGothic",sans-serif;font-weight:700;font-size:.95rem;
+    padding:14px 30px;border-radius:6px;transition:background .25s,transform .25s;
+    border:1.5px solid var(--border-dark);cursor:pointer;
+  }
+  .btn:hover{background:var(--ink);transform:translateY(-2px)}
 
   /* ===== ヘッダー ===== */
-  header{position:sticky;top:0;z-index:50;background:rgba(247,244,237,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-  .nav{display:flex;align-items:center;justify-content:space-between;height:80px}
-  .logo{font-family:"Shippori Mincho",serif;font-weight:700;font-size:1.3rem;letter-spacing:.04em}
-  .logo small{display:block;font-family:"Space Grotesk",sans-serif;font-weight:400;font-size:.6rem;letter-spacing:.3em;color:var(--accent);text-transform:uppercase;margin-top:2px}
-  .nav-links{display:flex;gap:32px;align-items:center}
-  .nav-links a.plain{font-size:.82rem;color:var(--ink-soft);display:flex;flex-direction:column;gap:1px;transition:color .2s}
-  .nav-links a.plain .en{font-family:"Space Grotesk",sans-serif;font-size:.62rem;letter-spacing:.15em;text-transform:uppercase;color:var(--accent);font-weight:500}
-  .nav-links a.plain:hover{color:var(--accent)}
-  .tel-mini{font-family:"Space Grotesk",sans-serif;font-weight:500;font-size:1rem;letter-spacing:.05em}
-  .menu-btn{display:none;background:none;border:none;font-size:1.6rem;cursor:pointer;color:var(--ink)}
+  header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:74px}
+  .logo{font-family:"BIZ UDPMincho",serif;font-weight:600;font-size:1.4rem;letter-spacing:.05em;color:var(--ink)}
+  .logo small{display:block;font-family:"BIZ UDPGothic";font-weight:400;font-size:.62rem;letter-spacing:.28em;color:var(--accent-2);margin-top:1px}
+  .nav-links{display:flex;gap:22px;align-items:center;font-size:.9rem}
+  .nav-links a.plain{color:var(--ink-soft);transition:color .2s;white-space:nowrap}
+  .nav-links a.plain:hover{color:var(--accent-2)}
+  .nav-links .tel-mini{font-weight:700;color:var(--accent-2);font-size:1.02rem;letter-spacing:.02em;white-space:nowrap}
+  .menu-btn{display:none;background:none;border:none;font-size:1.5rem;cursor:pointer;color:var(--ink)}
 
   /* ===== ヒーロー ===== */
-  .hero{padding:90px 0 100px;position:relative}
-  .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:60px;align-items:center}
-  .hero .eng-mark{font-family:"Space Grotesk",sans-serif;font-size:.72rem;letter-spacing:.28em;text-transform:uppercase;color:var(--accent);margin-bottom:28px}
-  .hero h1{font-size:4rem;font-weight:700;line-height:1.28;letter-spacing:.02em;margin-bottom:30px}
-  .hero h1 .u{background:linear-gradient(transparent 68%,rgba(180,116,30,.28) 68%)}
-  .hero p.lead{font-size:1.02rem;color:var(--sub);margin-bottom:40px;max-width:28em}
-  .hero-cta{display:flex;gap:24px;flex-wrap:wrap;align-items:center}
-  .hero-tel .en{font-family:"Space Grotesk",sans-serif;font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:var(--sub);display:block}
-  .hero-tel b{font-family:"Space Grotesk",sans-serif;font-size:1.3rem;letter-spacing:.03em;font-weight:500}
-  /* 縦長の写真枠 */
-  .hero-photo{position:relative;aspect-ratio:3/4;background:var(--paper-2);border-radius:3px;overflow:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;color:var(--accent-2);text-align:center;padding:24px}
-  .hero-photo::after{content:"";position:absolute;top:16px;left:16px;right:16px;bottom:16px;border:1px solid rgba(138,85,20,.35)}
+  .hero{padding:70px 0 76px}
+  .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:52px;align-items:center}
+  .hero .kicker{font-size:.92rem;color:var(--green-deep);letter-spacing:.04em;margin-bottom:22px;font-weight:500}
+  .hero h1{font-size:2.9rem;font-weight:600;line-height:1.5;letter-spacing:.03em;margin-bottom:26px}
+  .hero h1 .u{border-bottom:4px solid var(--accent);padding-bottom:.05em}
+  .hero p.lead{font-size:1rem;color:var(--sub);margin-bottom:34px;max-width:30em;line-height:1.8}
+  .hero-cta{display:flex;gap:22px;flex-wrap:wrap;align-items:center}
+  .hero-tel .lbl{font-size:.72rem;color:var(--sub);display:block;letter-spacing:.04em}
+  .hero-tel b{font-size:1.4rem;color:var(--accent-2);letter-spacing:.02em;font-family:"BIZ UDPGothic",sans-serif;font-weight:700}
+  /* 写真枠（古い写真額のように） */
+  .hero-photo{position:relative;aspect-ratio:3/4;background:var(--paper-2);border-radius:6px;overflow:hidden;
+    display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;color:var(--accent-2);text-align:center;padding:22px;
+    box-shadow:0 3px 0 var(--line)}
+  .hero-photo::after{content:"";position:absolute;top:14px;left:14px;right:14px;bottom:14px;border:1px solid rgba(190,106,30,.35);border-radius:3px}
   .hero-photo span{font-size:.9rem;font-weight:500}
-  .hero-photo small{font-size:.72rem;color:var(--sub)}
-  .hero-photo .en{font-family:"Space Grotesk",sans-serif;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase}
+  .hero-photo small{font-size:.74rem;color:var(--sub)}
+  .ph-mark{font-size:1.6rem;opacity:.55}
 
-  /* ===== フル幅の写真バンド ===== */
-  .band-photo{height:420px;background:var(--paper-2);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;color:var(--accent-2);text-align:center;padding:24px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-  .band-photo .en{font-family:"Space Grotesk",sans-serif;font-size:.7rem;letter-spacing:.22em;text-transform:uppercase}
+  /* ===== 写真バンド ===== */
+  .band-photo{min-height:340px;background:var(--paper);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;color:var(--accent-2);text-align:center;padding:30px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
   .band-photo span{font-size:.95rem;font-weight:500}
-  .band-photo small{font-size:.75rem;color:var(--sub)}
+  .band-photo small{font-size:.76rem;color:var(--sub)}
 
-  section{padding:110px 0}
-  .sec-head{margin-bottom:60px;max-width:640px}
-  .sec-head.center{margin-left:auto;margin-right:auto;text-align:center}
-  .sec-head h2{font-size:2.4rem;font-weight:700;letter-spacing:.02em;line-height:1.4}
-  .sec-head p{color:var(--sub);font-size:1rem;margin-top:18px}
+  section{padding:72px 0}
+  .sec-head{text-align:left;margin-bottom:38px;border-bottom:2px solid var(--line);padding-bottom:16px}
+  .sec-head h2{font-size:1.8rem;font-weight:700;letter-spacing:.01em;position:relative;padding-left:16px}
+  .sec-head h2::before{content:"";position:absolute;left:0;top:.18em;bottom:.18em;width:5px;background:var(--accent)}
+  .sec-head p{color:var(--sub);font-size:.96rem;margin-top:10px;padding-left:16px}
 
-  /* ===== 想い（濃い背景バンド） ===== */
-  .mission{background:var(--ink);color:var(--paper-on-ink);padding:130px 0}
-  .mission .eyebrow{color:var(--accent)}
-  .mission .m-lead{font-family:"Space Grotesk",sans-serif;font-size:.72rem;letter-spacing:.28em;text-transform:uppercase;color:var(--accent);margin-bottom:26px}
-  .mission h2{font-size:2.9rem;font-weight:700;line-height:1.5;letter-spacing:.03em;margin-bottom:36px}
-  .mission p{color:var(--sub-on-ink);font-size:1.05rem;max-width:40em}
-  .mission p + p{margin-top:20px}
+  /* ===== 想い ===== */
+  .mission{background:var(--paper);padding:72px 0;text-align:left}
+  .mission .panel{border:2px solid var(--border-dark);border-top:5px solid var(--accent);border-radius:4px;padding:44px 48px;background:var(--paper)}
+  .mission h2{font-size:2rem;font-weight:700;line-height:1.55;margin-bottom:24px}
+  .mission p{color:var(--sub);font-size:1.04rem;max-width:40em;margin:0}
+  .mission p + p{margin-top:18px}
 
   /* ===== 選ばれる理由 ===== */
-  .reasons{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--line)}
-  .reason{padding:44px 32px 48px;border-bottom:1px solid var(--line)}
-  .reason:not(:last-child){border-right:1px solid var(--line)}
-  .reason .rn{font-family:"Space Grotesk",sans-serif;font-size:.78rem;letter-spacing:.18em;color:var(--accent);font-weight:500;margin-bottom:22px}
-  .reason h3{font-size:1.4rem;font-weight:600;margin-bottom:16px;line-height:1.5}
-  .reason p{color:var(--sub);font-size:.92rem}
+  .reasons{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .reason{background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:30px 26px 32px;text-align:left;box-shadow:0 2px 0 var(--line)}
+  .reason .rn{display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:50%;background:var(--accent);color:#fff;border:1.5px solid var(--border-dark);font-family:"BIZ UDPGothic",sans-serif;font-weight:700;font-size:1.05rem;line-height:1;margin-bottom:14px}
+  .reason h3{font-size:1.25rem;font-weight:600;margin-bottom:10px;line-height:1.5}
+  .reason p{color:var(--sub);font-size:.92rem;text-align:left}
 
   /* ===== 一日の暮らし ===== */
-  .day{background:var(--paper-2)}
-  .timeline{max-width:760px;margin:0 auto}
-  .t-item{display:grid;grid-template-columns:130px 1fr;gap:28px;padding:26px 0;border-top:1px solid var(--line)}
-  .t-item:last-child{border-bottom:1px solid var(--line)}
-  .t-time{font-family:"Space Grotesk",sans-serif;font-weight:500;font-size:1.15rem;letter-spacing:.02em;color:var(--accent-2)}
-  .t-time small{display:block;font-family:"Noto Sans JP";font-size:.72rem;color:var(--sub);letter-spacing:.05em;margin-top:2px}
-  .t-body h3{font-size:1.2rem;font-weight:600;margin-bottom:6px}
+  .day{background:var(--paper)}
+  .timeline{max-width:720px;margin:0 auto}
+  .t-item{display:grid;grid-template-columns:120px 1fr;gap:26px;padding:24px 0;border-bottom:1px dashed var(--line)}
+  .t-item:first-child{border-top:1px dashed var(--line)}
+  .t-time{font-family:"BIZ UDPMincho",serif;font-weight:600;font-size:1.2rem;color:var(--accent-2)}
+  .t-time small{display:block;font-family:"BIZ UDPGothic";font-weight:400;font-size:.74rem;color:var(--sub);margin-top:2px}
+  .t-body h3{font-size:1.16rem;font-weight:600;margin-bottom:5px}
   .t-body p{color:var(--sub);font-size:.92rem}
 
   /* ===== 料金 ===== */
-  .info-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px}
-  .price-box{background:var(--paper);border:1px solid var(--line);border-radius:3px;padding:40px}
-  .price-box h3{font-size:1.3rem;margin-bottom:24px}
-  .price-group{font-family:"Space Grotesk",sans-serif;font-weight:500;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin:24px 0 8px;display:flex;align-items:baseline;gap:10px}
+  .info-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px}
+  .price-box{background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:36px;box-shadow:0 2px 0 var(--line)}
+  .price-box h3{font-size:1.3rem;margin-bottom:22px;text-align:center}
+  .price-group{font-family:"BIZ UDPMincho",serif;font-weight:600;font-size:1rem;color:var(--accent-2);margin:22px 0 8px;display:flex;align-items:baseline;gap:8px}
   .price-group:first-of-type{margin-top:0}
-  .price-group small{font-family:"Noto Sans JP";font-weight:400;font-size:.72rem;color:var(--sub);text-transform:none;letter-spacing:0}
+  .price-group small{font-family:"BIZ UDPGothic";font-weight:400;font-size:.74rem;color:var(--sub)}
   .price-row{display:flex;justify-content:space-between;padding:11px 0;border-bottom:1px dotted var(--line);font-size:.93rem}
-  .price-row b{font-family:"Space Grotesk",sans-serif;font-weight:500}
-  .price-sub{display:flex;justify-content:space-between;padding:12px 0;border-top:1.5px solid var(--ink);font-weight:700;margin-top:4px}
-  .price-sub b{font-family:"Space Grotesk",sans-serif}
-  .price-total{display:flex;justify-content:space-between;align-items:baseline;margin-top:22px;padding:22px;background:var(--ink);color:var(--paper-on-ink);border-radius:3px}
-  .price-total .lbl{font-family:"Shippori Mincho",serif;font-weight:600}
-  .price-total .lbl small{display:block;font-family:"Noto Sans JP";font-size:.7rem;color:var(--sub-on-ink);font-weight:400;margin-top:4px}
-  .price-total b{font-family:"Space Grotesk",sans-serif;font-weight:600;font-size:1.7rem;color:#fff}
+  .price-sub{display:flex;justify-content:space-between;padding:12px 0;border-top:2px solid var(--accent);font-weight:700;margin-top:4px}
+  .price-total{display:flex;justify-content:space-between;align-items:baseline;margin-top:22px;padding:18px 22px;background:var(--paper);border:2px solid var(--accent);box-shadow:0 0 0 1.5px var(--border-dark);border-radius:4px}
+  .price-total .lbl{font-family:"BIZ UDPMincho",serif;font-weight:700;color:var(--ink)}
+  .price-total .lbl small{display:block;font-family:"BIZ UDPGothic";font-size:.7rem;color:var(--sub);font-weight:400;margin-top:4px}
+  .price-total b{font-family:"BIZ UDPGothic",sans-serif;font-weight:700;font-size:1.55rem;color:var(--accent-2)}
   .note{font-size:.78rem;color:var(--sub);margin-top:18px;line-height:1.8}
   .steps{display:flex;flex-direction:column}
-  .step{display:grid;grid-template-columns:52px 1fr;gap:20px;padding:22px 0;border-bottom:1px solid var(--line)}
-  .step:first-child{border-top:1px solid var(--line)}
-  .step .sn{font-family:"Space Grotesk",sans-serif;font-size:1.5rem;font-weight:500;color:var(--accent);line-height:1}
+  .step{display:grid;grid-template-columns:44px 1fr;gap:18px;padding:18px 0;border-bottom:1px dashed var(--line)}
+  .step:first-child{border-top:1px dashed var(--line)}
+  .step .sn{display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;background:var(--accent);color:#fff;border:1.5px solid var(--border-dark);font-family:"BIZ UDPGothic",sans-serif;font-weight:700;font-size:1rem;line-height:1}
   .step h3{font-size:1.1rem;font-weight:600;margin-bottom:2px}
   .step p{font-size:.88rem;color:var(--sub)}
 
   /* ===== アクセス ===== */
-  .access-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:stretch}
-  .map-ph{background:var(--paper-2);border:1px solid var(--line);border-radius:3px;min-height:340px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;color:var(--accent-2);text-align:center;padding:24px}
-  .map-ph .en{font-family:"Space Grotesk",sans-serif;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase}
-  .access-info dl{display:grid;grid-template-columns:auto 1fr;gap:16px 28px;font-size:.96rem}
-  .access-info dt{font-family:"Space Grotesk",sans-serif;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);padding-top:5px}
-  .access-info dd{border-bottom:1px solid var(--line);padding-bottom:16px}
+  .access-grid{display:grid;grid-template-columns:1fr 1fr;gap:46px;align-items:stretch}
+  .map-ph{background:var(--paper-2);border:1px solid var(--line);border-radius:10px;min-height:320px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;color:var(--accent-2);text-align:center;padding:24px}
+  .access-info dl{display:grid;grid-template-columns:auto 1fr;gap:14px 24px;font-size:.96rem}
+  .access-info dt{font-family:"BIZ UDPMincho",serif;font-weight:600;color:var(--accent-2);padding-top:3px}
+  .access-info dd{border-bottom:1px dashed var(--line);padding-bottom:14px}
 
-  /* ===== 採用（濃い背景） ===== */
-  .recruit{background:var(--ink);color:var(--paper-on-ink);padding:120px 0}
-  .recruit .eyebrow{color:var(--accent)}
-  .recruit-inner{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
-  .recruit h2{font-size:2.4rem;font-weight:700;line-height:1.45;margin-bottom:24px}
-  .recruit p{color:var(--sub-on-ink);font-size:1rem;margin-bottom:28px}
-  .recruit ul{list-style:none;margin-bottom:36px}
-  .recruit li{padding:14px 0;border-bottom:1px solid rgba(167,158,140,.25);position:relative;padding-left:28px}
-  .recruit li::before{content:"—";position:absolute;left:0;color:var(--accent)}
-  .recruit .btn{background:var(--accent);color:#fff}
-  .recruit .btn:hover{background:var(--paper);color:var(--ink)}
-  .recruit-photo{aspect-ratio:4/5;background:rgba(255,255,255,.05);border:1px solid rgba(167,158,140,.3);border-radius:3px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;color:var(--sub-on-ink);text-align:center;padding:24px}
-  .recruit-photo .en{font-family:"Space Grotesk",sans-serif;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--accent)}
+  /* ===== 採用 ===== */
+  .recruit{background:var(--paper);color:var(--ink);padding:72px 0}
+
+  .recruit-inner{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+  .recruit h2{font-size:2rem;font-weight:600;line-height:1.6;margin-bottom:20px}
+  .recruit p{color:var(--sub);font-size:1rem;margin-bottom:24px}
+  .recruit ul{list-style:none;margin-bottom:32px}
+  .recruit li{padding:12px 0 12px 24px;border-bottom:1px solid var(--line);position:relative}
+  .recruit li::before{content:"";position:absolute;left:0;top:20px;width:8px;height:8px;background:var(--accent)}
+  .recruit .btn{background:var(--accent-2);color:#fff}
+  .recruit .btn:hover{background:var(--ink);color:#fff}
+  .recruit-photo{aspect-ratio:4/5;background:var(--paper);border:2px solid var(--line);border-radius:4px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;color:var(--accent-2);text-align:center;padding:24px}
 
   /* ===== お問い合わせ ===== */
   .contact{text-align:center}
-  .contact .big-tel{font-family:"Space Grotesk",sans-serif;font-size:2.8rem;font-weight:500;letter-spacing:.03em;margin:16px 0 6px}
+  .contact .big-tel{font-family:"BIZ UDPGothic",sans-serif;font-size:2.5rem;font-weight:700;color:var(--accent-2);letter-spacing:.02em;margin:14px 0 6px}
   .contact .hours{color:var(--sub);font-size:.9rem}
-  .contact .mail{font-family:"Space Grotesk",sans-serif;color:var(--accent-2);font-size:1.05rem;letter-spacing:.03em;margin-top:8px}
-  .form{max-width:600px;margin:48px auto 0;text-align:left;display:grid;gap:20px}
-  .form label{font-family:"Space Grotesk",sans-serif;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);display:block;margin-bottom:8px}
-  .form input,.form textarea{width:100%;padding:14px 16px;border:1px solid var(--line);border-radius:2px;font-family:inherit;font-size:.95rem;background:var(--paper);color:var(--ink)}
+  .contact .mail{color:var(--green-deep);font-size:1.05rem;margin-top:8px;font-weight:500}
+  .form{max-width:560px;margin:44px auto 0;text-align:left;display:grid;gap:18px}
+  .form label{font-family:"BIZ UDPMincho",serif;font-weight:600;font-size:.92rem;color:var(--accent-2);display:block;margin-bottom:7px}
+  .form input,.form textarea{width:100%;padding:13px 15px;border:1px solid var(--line);border-radius:7px;font-family:inherit;font-size:.95rem;background:var(--paper);color:var(--ink)}
   .form input:focus,.form textarea:focus{outline:none;border-color:var(--accent)}
   .form .btn{justify-content:center;width:100%}
 
   /* ===== フッター ===== */
-  footer{background:var(--ink);color:var(--sub-on-ink);padding:80px 0 36px;font-size:.85rem}
-  .foot-top{display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:40px;margin-bottom:48px;padding-bottom:48px;border-bottom:1px solid rgba(167,158,140,.2)}
-  footer .logo{color:var(--paper);margin-bottom:16px}
+  footer{background:var(--ink);color:#d9ccbb;padding:60px 0 30px;font-size:.86rem}
+  .foot-top{display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:38px;margin-bottom:40px;padding-bottom:40px;border-bottom:1px solid rgba(217,204,187,.2)}
+  footer .logo{color:#f2e9d8;margin-bottom:14px}
   footer .logo small{color:var(--accent)}
-  footer h4{font-family:"Space Grotesk",sans-serif;color:var(--paper-on-ink);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px}
-  footer a:hover{color:var(--paper)}
-  footer ul{list-style:none;display:flex;flex-direction:column;gap:10px}
+  footer h4{font-family:"BIZ UDPMincho",serif;color:#f2e9d8;font-size:1.02rem;margin-bottom:15px;font-weight:600}
+  footer a:hover{color:#fff}
+  footer ul{list-style:none;display:flex;flex-direction:column;gap:9px}
   .nap{line-height:2}
-  .copy{text-align:center;font-family:"Space Grotesk",sans-serif;font-size:.7rem;letter-spacing:.1em;opacity:.6}
+  .copy{text-align:center;font-size:.74rem;opacity:.7}
 
   @media(max-width:900px){
-    .hero-grid,.info-grid,.access-grid,.recruit-inner,.foot-top{grid-template-columns:1fr;gap:40px}
+    .hero-grid,.info-grid,.access-grid,.recruit-inner,.foot-top{grid-template-columns:1fr;gap:38px}
     .reasons{grid-template-columns:1fr}
-    .reason:not(:last-child){border-right:none}
-    .hero h1{font-size:2.7rem}
-    .mission h2{font-size:2rem}
-    .sec-head h2{font-size:1.9rem}
+    .hero h1{font-size:2.3rem}
+    .mission h2{font-size:1.75rem}
+    .sec-head h2{font-size:1.6rem}
     .nav-links{display:none}
     .menu-btn{display:block}
-    section,.mission,.recruit{padding:70px 0}
-    .hero{padding:56px 0}
-    .wrap{padding:0 24px}
+    section,.mission,.recruit{padding:60px 0}
+    .hero{padding:44px 0}
+    .wrap{padding:0 22px}
     .hero-photo{aspect-ratio:4/3}
   }
 </style>
@@ -207,14 +199,14 @@
 <!-- ヘッダー -->
 <header>
   <div class="wrap nav">
-    <div class="logo">源氏庵<small>Group Home Genji-an</small></div>
+    <div class="logo">源氏庵<small>ぐるーぷほーむ げんじあん</small></div>
     <nav class="nav-links">
-      <a class="plain" href="#mission"><span class="en">About</span>私たちの想い</a>
-      <a class="plain" href="#life"><span class="en">Life</span>一日の暮らし</a>
-      <a class="plain" href="#fee"><span class="en">Fee</span>料金・入居</a>
-      <a class="plain" href="#access"><span class="en">Access</span>アクセス</a>
-      <a class="plain" href="#recruit"><span class="en">Recruit</span>採用情報</a>
-      <span class="tel-mini">055-949-2255</span>
+      <a class="plain" href="#mission">私たちの想い</a>
+      <a class="plain" href="#reasons">源氏庵のこと</a>
+      <a class="plain" href="#life">一日の暮らし</a>
+      <a class="plain" href="#fee">料金・入居</a>
+      <a class="plain" href="#access">アクセス</a>
+      <span class="tel-mini">☎ 055-949-2255</span>
       <a class="btn" href="#contact">見学予約</a>
     </nav>
     <button class="menu-btn" aria-label="メニュー">☰</button>
@@ -224,66 +216,81 @@
 <!-- ヒーロー -->
 <section class="hero">
   <div class="wrap hero-grid">
-    <div class="reveal">
-      <div class="eng-mark">Group Home Genji-an — 伊豆の国市・韮山</div>
-      <h1>最期まで、<br><span class="u">この家で。</span></h1>
-      <p class="lead">認知症があっても、住み慣れた伊豆の国市で穏やかに。開設から20年以上、9名1ユニットの家庭的なグループホームです。</p>
+    <div>
+      <div class="kicker">伊豆の国市・韮山　認知症のグループホーム</div>
+      <h1>自然に、自分らしく、<br><span class="u">ともに生きよう。</span></h1>
+      <p class="lead">認知症があっても、住み慣れた地域で、自然に、自分らしく。開設から20年以上、田園から富士山を望むこの場所で、9名が家庭のように暮らすグループホームです。</p>
       <div class="hero-cta">
-        <a class="btn" href="#contact"><span class="en">Contact</span>見学・ご相談</a>
+        <a class="btn" href="#contact">見学・ご相談はこちら</a>
         <div class="hero-tel">
-          <span class="en">Tel　9:00–18:00</span>
-          <b>055-949-2255</b>
+          <span class="lbl">お電話でのお問い合わせ（9:00〜18:00）</span>
+          <b>☎ 055-949-2255</b>
         </div>
       </div>
     </div>
-    <div class="hero-photo reveal">
-      <span class="en">Photo</span>
+    <div class="hero-photo">
       <span>外観・リビングの写真</span>
       <small>縦長の大きな写真がここに入ります</small>
     </div>
   </div>
 </section>
 
-<!-- フル幅 写真バンド -->
-<div class="band-photo reveal">
-  <span class="en">Life at Genji-an</span>
+<!-- 写真バンド -->
+<div class="band-photo">
   <span>暮らしの様子を伝える、横長の大きな写真</span>
-  <small>食卓を囲む風景や、庭・共用スペースなど</small>
+  <small>田園から望む富士山、食卓を囲む風景、庭など</small>
 </div>
 
-<!-- 想い（濃い背景） -->
+<!-- 想い -->
 <section class="mission" id="mission">
-  <div class="wrap reveal">
-    <div class="m-lead">Our Mission</div>
-    <h2>特別なことは、しません。<br>穏やかな「いつも」を、最期まで。</h2>
-    <p>グループホーム源氏庵は、病院でも大きな施設でもありません。9名の入居者様が、職員とともに暮らす「家」です。歌って、笑って、みんなで食卓を囲む——そんな当たり前の毎日を、認知症があっても続けられること。それが私たちの願いです。</p>
-    <p>状態が変わっても、住み慣れたこの場所で。源氏庵は看取りにも対応し、最期のときまで穏やかに過ごしていただけるよう寄り添います。</p>
+  <div class="wrap">
+    <div class="panel">
+      <div class="label">私たちの想い</div>
+      <h2>私たちが目指すのは、<br>「我が家」です。</h2>
+      <p>「自然に、自分らしく、ともに生きよう」——これが源氏庵の理念です。この「ともに」の中には、入居者様だけでなく、そのご家族も、働く職員も含まれます。職員自身が「いつか自分もここで過ごしたい」と思えるような居場所であること。それが、私たちの目指す我が家です。</p>
+      <p>源氏庵は、無理な延命を目的とはしていません。穏やかであること、その方らしくあること——最期のときまでをどう過ごすかを、ご家族や主治医と一緒に、ていねいに考えていきます。この考えに共感してくださるご家族と、静かに歩んでいけたらと願っています。</p>
+    </div>
   </div>
 </section>
 
 <!-- 選ばれる理由 -->
-<section id="about">
+<section id="reasons">
   <div class="wrap">
-    <div class="sec-head reveal">
-      <div class="eyebrow">Why Genji-an</div>
-      <h2>源氏庵が、大切にしていること</h2>
-      <p>ご家族に「ここなら最期まで安心」と感じていただくために。</p>
+    <div class="sec-head">
+      <div class="label">源氏庵のこと</div>
+      <h2>源氏庵が、積み重ねてきたこと</h2>
+      <p>きれいごとではなく、実際に大切にしてきたことを、そのままお伝えします。</p>
     </div>
-    <div class="reasons reveal">
+    <div class="reasons">
       <div class="reason">
-        <div class="rn">01 / Care to the end</div>
-        <h3>最期まで、住み慣れたこの場所で</h3>
-        <p>源氏庵は看取りにも対応しています。状態が変わっても住み替えを迫られることなく、慣れ親しんだ職員と部屋で、最期のときまで穏やかに過ごしていただけます。</p>
+        <div class="rn">1</div>
+        <h3>最期まで、この家で</h3>
+        <p>源氏庵は看取りに対応しています。認知症に寄り添い在宅看取りを行う協力医と連携し、状態が変わっても住み替えることなく、慣れた職員と部屋で最期のときまで穏やかに過ごしていただけます。</p>
       </div>
       <div class="reason">
-        <div class="rn">02 / Home-like</div>
-        <h3>9名1ユニットの家庭的な暮らし</h3>
-        <p>大人数の施設ではありません。9名という少人数だからこそ、一人ひとりの生活リズムやその日の体調に合わせられる。「施設」ではなく「わが家」のような毎日がここにあります。</p>
+        <div class="rn">2</div>
+        <h3>看護職員がいる安心</h3>
+        <p>グループホームには珍しく、看護職員（役員）を配置しています。施設の近くに住み込み、有事の際はすぐに駆けつける体制です。医療と生活の両面から見守ります。</p>
       </div>
       <div class="reason">
-        <div class="rn">03 / 20+ years</div>
-        <h3>開設20年以上の安心</h3>
-        <p>伊豆の国市で20年以上、認知症の方の暮らしを支えてきました。長く積み重ねた経験と、地域に根ざした信頼が私たちの土台です。</p>
+        <div class="rn">3</div>
+        <h3>9名1ユニットの我が家</h3>
+        <p>大人数の施設ではありません。9名という少人数だからこそ、一人ひとりの生活リズムや体調に合わせられる。「施設」ではなく「我が家」のような毎日があります。</p>
+      </div>
+      <div class="reason">
+        <div class="rn">4</div>
+        <h3>地元の職員が、長く</h3>
+        <p>職員の多くが地元出身で、勤続15年・20年以上のスタッフも少なくありません。顔なじみの職員が、家族のように寄り添います。</p>
+      </div>
+      <div class="reason">
+        <div class="rn">5</div>
+        <h3>地産地消の手づくりごはん</h3>
+        <p>地元の農家さんが愛情込めて作ったお米や食材を使い、毎日の食事を施設内で手づくりしています。旬のものを、あたたかいうちに。</p>
+      </div>
+      <div class="reason">
+        <div class="rn">6</div>
+        <h3>富士山を望む暮らし</h3>
+        <p>田園から富士山を毎日眺められる環境です。季節のよい日には、富士山を眺めながらの散歩や日光浴も。四季を感じる穏やかな時間が流れます。</p>
       </div>
     </div>
   </div>
@@ -292,12 +299,12 @@
 <!-- 一日の暮らし -->
 <section class="day" id="life">
   <div class="wrap">
-    <div class="sec-head center reveal">
-      <div class="eyebrow center">A Day at Genji-an</div>
+    <div class="sec-head">
+      <div class="label">一日の暮らし</div>
       <h2>源氏庵の、ある一日</h2>
       <p>健康を見守りながら、穏やかに。丁寧なケアと笑顔のある毎日を。</p>
     </div>
-    <div class="timeline reveal">
+    <div class="timeline">
       <div class="t-item"><div class="t-time">6:00<small>朝</small></div><div class="t-body"><h3>おはようございます</h3><p>それぞれのペースで起床。お着替えや洗顔・整髪をお手伝いし、気持ちよく一日を始めます。（夜間も定時に見守りを行っています）</p></div></div>
       <div class="t-item"><div class="t-time">7:00<small>朝食</small></div><div class="t-body"><h3>みんなで食卓を囲む</h3><p>朝食のあとは口腔ケアやお薬の確認まで丁寧に。健康を毎日しっかり見守ります。</p></div></div>
       <div class="t-item"><div class="t-time">9:00<small>午前</small></div><div class="t-body"><h3>健康チェックと散歩</h3><p>血圧・脈・体温を測り、その日の体調を確認。天気のいい日はお散歩に出て、外の空気を楽しみます。</p></div></div>
@@ -312,21 +319,21 @@
 <!-- 料金・入居 -->
 <section id="fee">
   <div class="wrap">
-    <div class="sec-head reveal">
-      <div class="eyebrow">Fee &amp; Steps</div>
+    <div class="sec-head">
+      <div class="label">料金・入居</div>
       <h2>料金と、入居までの流れ</h2>
       <p>いちばん不安な「お金」と「手続き」を、わかりやすくお伝えします。</p>
     </div>
-    <div class="info-grid reveal">
+    <div class="info-grid">
       <div class="price-box">
         <h3>月額利用料の目安</h3>
         <div class="price-group">① 生活にかかる実費 <small>要介護度に関わらず共通</small></div>
-        <div class="price-row"><span>家賃</span><b>50,000円</b></div>
-        <div class="price-row"><span>水道光熱費</span><b>12,493円</b></div>
-        <div class="price-row"><span>食材費（1日約1,580円）</span><b>49,104円</b></div>
-        <div class="price-sub"><span>実費 小計</span><b>111,597円</b></div>
+        <div class="price-row"><span>家賃</span><span>50,000円</span></div>
+        <div class="price-row"><span>水道光熱費</span><span>12,493円</span></div>
+        <div class="price-row"><span>食材費（1日約1,580円）</span><span>49,104円</span></div>
+        <div class="price-sub"><span>実費 小計</span><span>111,597円</span></div>
         <div class="price-group">② 介護保険の自己負担分 <small>要介護度・所得で変動</small></div>
-        <div class="price-row"><span>要介護2・1割負担の場合（各種加算含む）</span><b>約30,551円</b></div>
+        <div class="price-row"><span>要介護2・1割負担の場合（各種加算含む）</span><span>約30,551円</span></div>
         <div class="price-total">
           <span class="lbl">合計の目安<small>要介護2・1割負担の方の場合</small></span>
           <b>約142,000円</b>
@@ -337,10 +344,10 @@
         </p>
       </div>
       <div class="steps">
-        <div class="step"><div class="sn">01</div><div><h3>お問い合わせ・見学</h3><p>お電話かメールでご連絡ください。ご希望に合わせて見学日を調整します。</p></div></div>
-        <div class="step"><div class="sn">02</div><div><h3>ご相談・面談</h3><p>ご本人の状況やご希望を伺い、入居について一緒に考えます。</p></div></div>
-        <div class="step"><div class="sn">03</div><div><h3>お申し込み・確認</h3><p>必要書類のご提出後、受け入れ可能かを確認します。</p></div></div>
-        <div class="step"><div class="sn">04</div><div><h3>ご入居</h3><p>新しい暮らしのスタート。私たちが丁寧にサポートします。</p></div></div>
+        <div class="step"><div class="sn">1</div><div><h3>お問い合わせ・見学</h3><p>お電話かメールでご連絡ください。ご希望に合わせて見学日を調整します。</p></div></div>
+        <div class="step"><div class="sn">2</div><div><h3>ご相談・面談</h3><p>ご本人の状況やご希望を伺い、入居について一緒に考えます。</p></div></div>
+        <div class="step"><div class="sn">3</div><div><h3>お申し込み・確認</h3><p>必要書類のご提出後、受け入れ可能かを確認します。</p></div></div>
+        <div class="step"><div class="sn">4</div><div><h3>ご入居</h3><p>新しい暮らしのスタート。私たちが丁寧にサポートします。</p></div></div>
       </div>
     </div>
   </div>
@@ -349,68 +356,68 @@
 <!-- アクセス -->
 <section class="day" id="access">
   <div class="wrap">
-    <div class="sec-head reveal">
-      <div class="eyebrow">Access</div>
+    <div class="sec-head">
+      <div class="label">アクセス</div>
       <h2>アクセス</h2>
-      <p>伊豆の国市四日町。マックスバリュ韮山店のすぐ隣です。</p>
+      <p>伊豆の国市四日町、マックスバリュ韮山店のすぐ隣です。運営推進会議を通じて介護保険課・地域包括支援センター・民生委員と連携し、地域に必要とされる施設を目指しています。</p>
     </div>
-    <div class="access-grid reveal">
+    <div class="access-grid">
       <div class="map-ph">
-        <span class="en">Map</span>
-        <small>ここにGoogleマップを埋め込みます</small>
+          <small>ここにGoogleマップを埋め込みます</small>
       </div>
       <div class="access-info">
         <dl>
-          <dt>Address</dt><dd>〒410-2123　静岡県伊豆の国市四日町346-2</dd>
-          <dt>Tel</dt><dd>055-949-2255</dd>
-          <dt>Mail</dt><dd>genji3462@gmail.com</dd>
-          <dt>Train</dt><dd>伊豆箱根鉄道 韮山駅</dd>
-          <dt>Mark</dt><dd>マックスバリュ韮山店 隣（駐車場あり）</dd>
-          <dt>Capacity</dt><dd>定員9名（1ユニット）</dd>
+          <dt>住所</dt><dd>〒410-2123　静岡県伊豆の国市四日町346-2</dd>
+          <dt>電話</dt><dd>055-949-2255</dd>
+          <dt>メール</dt><dd>genji3462@gmail.com</dd>
+          <dt>電車</dt><dd>伊豆箱根鉄道 韮山駅</dd>
+          <dt>目印</dt><dd>マックスバリュ韮山店 隣（駐車場あり）</dd>
+          <dt>定員</dt><dd>9名（1ユニット）</dd>
         </dl>
       </div>
     </div>
   </div>
 </section>
 
-<!-- 採用（濃い背景） -->
+<!-- 採用 -->
 <section class="recruit" id="recruit">
-  <div class="wrap recruit-inner">
-    <div class="reveal">
-      <div class="eyebrow">Recruit</div>
-      <h2>一人ひとりと、<br>ゆっくり向き合う仕事を。</h2>
-      <p>大人数をさばく介護ではなく、少人数だからできる丁寧なケアを。源氏庵で、いっしょに働く仲間を募集しています。</p>
-      <ul>
-        <li>定員9名の少人数だから、じっくり寄り添える</li>
-        <li>開設20年以上の安定した職場</li>
-        <li>未経験・ブランクのある方もご相談ください</li>
-        <li>勤務時間・シフトはご相談可</li>
-      </ul>
-      <a class="btn" href="#contact"><span class="en">Contact</span>採用について問い合わせる</a>
-    </div>
-    <div class="recruit-photo reveal">
-      <span class="en">Photo</span>
-      <span>働くスタッフの写真</span>
+  <div class="wrap">
+    <div class="label">職員募集</div>
+    <div class="recruit-inner">
+      <div>
+        <h2>一人ひとりと、<br>ゆっくり向き合う仕事を。</h2>
+        <p>大人数をさばく介護ではなく、少人数だからできる丁寧なケアを。源氏庵で、いっしょに働く仲間を募集しています。</p>
+        <ul>
+          <li>定員9名の少人数だから、じっくり寄り添える</li>
+          <li>地元出身・勤続15〜20年の職員が多い、安定した職場</li>
+          <li>「いつか自分もここで過ごしたい」と思える居場所づくり</li>
+          <li>未経験・ブランクのある方も、勤務時間・シフトはご相談可</li>
+        </ul>
+        <a class="btn" href="#contact">採用について問い合わせる</a>
+      </div>
+      <div class="recruit-photo">
+          <span>働くスタッフの写真</span>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- お問い合わせ -->
 <section class="contact" id="contact">
-  <div class="wrap reveal">
-    <div class="sec-head center" style="margin-bottom:32px">
-      <div class="eyebrow center">Contact</div>
+  <div class="wrap">
+    <div class="sec-head" style="margin-bottom:26px">
+      <div class="label">お問い合わせ</div>
       <h2>見学・ご相談は、お気軽に</h2>
     </div>
     <p style="color:var(--sub)">まずはお電話ください。見学だけでも大歓迎です。</p>
-    <div class="big-tel">055-949-2255</div>
+    <div class="big-tel">☎ 055-949-2255</div>
     <p class="hours">受付時間 9:00〜18:00（土日祝も対応します）</p>
-    <p class="mail">genji3462@gmail.com</p>
+    <p class="mail">✉ genji3462@gmail.com</p>
     <div class="form">
-      <div><label for="n">Name / お名前</label><input id="n" type="text" placeholder="山田 花子"></div>
-      <div><label for="t">Tel / お電話番号</label><input id="t" type="tel" placeholder="000-0000-0000"></div>
-      <div><label for="m">Message / ご相談内容</label><textarea id="m" rows="4" placeholder="見学を希望します／料金について聞きたい　など"></textarea></div>
-      <button class="btn" type="button" style="background:var(--ink)">この内容で送信する</button>
+      <div><label for="n">お名前</label><input id="n" type="text" placeholder="山田 花子"></div>
+      <div><label for="t">お電話番号</label><input id="t" type="tel" placeholder="000-0000-0000"></div>
+      <div><label for="m">ご相談内容</label><textarea id="m" rows="4" placeholder="見学を希望します／料金について聞きたい　など"></textarea></div>
+      <button class="btn" type="button">この内容で送信する</button>
     </div>
   </div>
 </section>
@@ -420,7 +427,7 @@
   <div class="wrap">
     <div class="foot-top">
       <div>
-        <div class="logo">源氏庵<small>Group Home Genji-an</small></div>
+        <div class="logo">源氏庵<small>ぐるーぷほーむ げんじあん</small></div>
         <p class="nap">
           有限会社 源氏<br>
           〒410-2123 静岡県伊豆の国市四日町346-2<br>
@@ -428,32 +435,26 @@
         </p>
       </div>
       <div>
-        <h4>Menu</h4>
+        <h4>ごあんない</h4>
         <ul>
           <li><a href="#mission">私たちの想い</a></li>
+          <li><a href="#reasons">源氏庵のこと</a></li>
           <li><a href="#life">一日の暮らし</a></li>
           <li><a href="#fee">料金・入居の流れ</a></li>
-          <li><a href="#access">アクセス</a></li>
         </ul>
       </div>
       <div>
-        <h4>Contact</h4>
+        <h4>お問い合わせ</h4>
         <ul>
+          <li><a href="#access">アクセス</a></li>
           <li><a href="#contact">見学・ご相談</a></li>
-          <li><a href="#recruit">採用情報</a></li>
+          <li><a href="#recruit">職員募集</a></li>
         </ul>
       </div>
     </div>
-    <div class="copy">© Group Home Genji-an / 有限会社 源氏</div>
+    <div class="copy">© グループホーム源氏庵 ／ 有限会社 源氏</div>
   </div>
 </footer>
-
-<script>
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
-  }, { threshold: 0.12 });
-  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
-</script>
 
 </body>
 </html>
