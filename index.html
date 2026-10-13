@@ -73,7 +73,7 @@
   .hero-tel .lbl{font-size:.72rem;color:var(--sub);display:block;letter-spacing:.04em}
   .hero-tel b{font-size:1.4rem;color:var(--accent-2);letter-spacing:.02em;font-family:"BIZ UDPGothic",sans-serif;font-weight:700}
   /* 写真枠（古い写真額のように） */
-  .hero-photo{position:relative;aspect-ratio:3/4;background:var(--paper-2);border-radius:6px;overflow:hidden;
+  .hero-photo{position:relative;aspect-ratio:16/9;background:var(--paper-2);border-radius:6px;overflow:hidden;
     display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;color:var(--accent-2);text-align:center;padding:22px;
     box-shadow:0 3px 0 var(--line)}
   .hero-photo::after{content:"";position:absolute;top:14px;left:14px;right:14px;bottom:14px;border:1px solid rgba(190,106,30,.35);border-radius:3px}
@@ -190,7 +190,7 @@
     section,.mission,.recruit{padding:60px 0}
     .hero{padding:44px 0}
     .wrap{padding:0 22px}
-    .hero-photo{aspect-ratio:4/3}
+    .hero-photo{aspect-ratio:16/9}
   }
 </style>
 </head>
@@ -228,9 +228,8 @@
         </div>
       </div>
     </div>
-    <div class="hero-photo">
-      <span>外観・リビングの写真</span>
-      <small>縦長の大きな写真がここに入ります</small>
+    <div class="hero-photo" style="padding:0;">
+      <img src="genjian-kanban.jpg" alt="源氏庵の看板。「自然に自分らしく共に生きよう 源氏庵」と書かれた書" style="width:100%;height:100%;object-fit:cover;object-position:center;">
     </div>
   </div>
 </section>
@@ -238,6 +237,11 @@
 <!-- 写真バンド -->
 <div class="band-photo" style="padding:0;overflow:hidden;">
   <img src="P1003471.JPG" alt="源氏庵の暮らしの様子。田園から望む富士山と食卓を囲む風景" style="width:100%;height:100%;object-fit:cover;">
+</div>
+
+<!-- 写真バンド2 -->
+<div class="band-photo" style="padding:0;overflow:hidden;">
+  <img src="denen-fuji.jpg" alt="源氏庵のある風景。黄金色に実った田んぼの向こうに望む富士山と住宅街" style="width:100%;height:100%;object-fit:cover;">
 </div>
 
 <!-- 想い -->
