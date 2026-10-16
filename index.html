@@ -414,12 +414,14 @@
     <div class="big-tel">☎ 055-949-2255</div>
     <p class="hours">受付時間 9:00〜18:00（土日祝も対応します）</p>
     <p class="mail">✉ genji3462@gmail.com</p>
-    <div class="form">
-      <div><label for="n">お名前</label><input id="n" type="text" placeholder="山田 花子"></div>
-      <div><label for="t">お電話番号</label><input id="t" type="tel" placeholder="000-0000-0000"></div>
-      <div><label for="m">ご相談内容</label><textarea id="m" rows="4" placeholder="見学を希望します／料金について聞きたい　など"></textarea></div>
-      <button class="btn" type="button">この内容で送信する</button>
-    </div>
+    <form class="form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thanks.html">
+      <input type="hidden" name="form-name" value="contact">
+      <p hidden><label>この欄は空のままにしてください: <input name="bot-field"></label></p>
+      <div><label for="n">お名前</label><input id="n" name="お名前" type="text" placeholder="山田 花子" required></div>
+      <div><label for="t">お電話番号</label><input id="t" name="お電話番号" type="tel" placeholder="000-0000-0000" required></div>
+      <div><label for="m">ご相談内容</label><textarea id="m" name="ご相談内容" rows="4" placeholder="見学を希望します／料金について聞きたい　など"></textarea></div>
+      <button class="btn" type="submit">この内容で送信する</button>
+    </form>
   </div>
 </section>
 
