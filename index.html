@@ -414,13 +414,16 @@
     <div class="big-tel">☎ 055-949-2255</div>
     <p class="hours">受付時間 9:00〜18:00（土日祝も対応します）</p>
     <p class="mail">✉ genji3462@gmail.com</p>
-    <form class="form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thanks.html">
+    <form class="form" id="contactForm" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thanks.html">
       <input type="hidden" name="form-name" value="contact">
       <p hidden><label>この欄は空のままにしてください: <input name="bot-field"></label></p>
       <div><label for="n">お名前</label><input id="n" name="お名前" type="text" placeholder="山田 花子" required></div>
-      <div><label for="t">お電話番号</label><input id="t" name="お電話番号" type="tel" placeholder="000-0000-0000" required></div>
+      <p style="margin:-6px 0 -4px;color:var(--sub);font-size:.85rem">お電話番号・メールアドレスは、どちらか一方のご記入で大丈夫です。</p>
+      <div><label for="t">お電話番号</label><input id="t" name="お電話番号" type="tel" placeholder="000-0000-0000"></div>
+      <div><label for="e">メールアドレス</label><input id="e" name="メールアドレス" type="email" placeholder="example@email.com"></div>
       <div><label for="m">ご相談内容</label><textarea id="m" name="ご相談内容" rows="4" placeholder="見学を希望します／料金について聞きたい　など"></textarea></div>
-      <button class="btn" type="submit">この内容で送信する</button>
+      <p id="formError" style="display:none;color:#c0392b;font-size:.9rem;margin:0"></p>
+      <button class="btn" type="submit">入力内容を確認する</button>
     </form>
   </div>
 </section>
@@ -459,5 +462,56 @@
   </div>
 </footer>
 
+<!-- 送信前の確認モーダル -->
+<div id="confirmModal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:1000;align-items:center;justify-content:center;padding:20px">
+  <div style="background:#fff;max-width:460px;width:100%;border-radius:14px;padding:28px 24px;max-height:85vh;overflow:auto;box-shadow:0 20px 50px rgba(0,0,0,.25)">
+    <h3 style="font-size:1.2rem;color:var(--accent-2);margin:0 0 6px;text-align:center">この内容で送信しますか？</h3>
+    <p style="color:var(--sub);font-size:.88rem;text-align:center;margin:0 0 18px">内容をご確認のうえ、送信してください。</p>
+    <dl id="confirmBody" style="margin:0 0 22px"></dl>
+    <div style="display:flex;gap:12px;flex-direction:column">
+      <button id="confirmSend" type="button" class="btn" style="width:100%;justify-content:center">送信する</button>
+      <button id="confirmEdit" type="button" style="width:100%;padding:12px;border:1px solid var(--line);background:#fff;color:var(--sub);border-radius:7px;font-family:inherit;font-size:.95rem;cursor:pointer">修正する</button>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  var form = document.getElementById('contactForm');
+  if(!form) return;
+  var modal = document.getElementById('confirmModal');
+  var body = document.getElementById('confirmBody');
+  var errEl = document.getElementById('formError');
+  var confirmed = false;
+
+  function val(id){ var el=document.getElementById(id); return el ? el.value.trim() : ''; }
+  function esc(s){ return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];}); }
+  function row(label,value){
+    return '<dt style="font-weight:600;color:var(--accent-2);font-size:.82rem;margin-top:12px">'+esc(label)+'</dt>'+
+           '<dd style="margin:3px 0 0;color:var(--ink);font-size:.98rem;white-space:pre-wrap">'+esc(value)+'</dd>';
+  }
+
+  form.addEventListener('submit', function(e){
+    if(confirmed) return;
+    e.preventDefault();
+    errEl.style.display='none';
+    var name=val('n'), tel=val('t'), email=val('e'), msg=val('m');
+    if(!name){ errEl.textContent='お名前をご記入ください。'; errEl.style.display='block'; return; }
+    if(!tel && !email){ errEl.textContent='お電話番号またはメールアドレスの、どちらか一方をご記入ください。'; errEl.style.display='block'; return; }
+    var rows='';
+    rows+=row('お名前', name);
+    if(tel) rows+=row('お電話番号', tel);
+    if(email) rows+=row('メールアドレス', email);
+    rows+=row('ご相談内容', msg || '（未記入）');
+    body.innerHTML=rows;
+    modal.style.display='flex';
+  });
+
+  document.getElementById('confirmEdit').addEventListener('click', function(){ modal.style.display='none'; });
+  document.getElementById('confirmSend').addEventListener('click', function(){
+    confirmed=true; modal.style.display='none'; form.submit();
+  });
+})();
+</script>
 </body>
 </html>
