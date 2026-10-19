@@ -147,7 +147,7 @@
   /* ===== 採用 ===== */
   .recruit{background:var(--paper);color:var(--ink);padding:72px 0}
 
-  .recruit-inner{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+  .recruit-inner{display:grid;grid-template-columns:1fr;gap:0;max-width:760px}
   .recruit h2{font-size:2rem;font-weight:600;line-height:1.6;margin-bottom:20px}
   .recruit p{color:var(--sub);font-size:1rem;margin-bottom:24px}
   .recruit ul{list-style:none;margin-bottom:32px}
@@ -303,13 +303,17 @@
       <p>健康を見守りながら、穏やかに。丁寧なケアと笑顔のある毎日を。</p>
     </div>
     <div class="timeline">
-      <div class="t-item"><div class="t-time">6:00<small>朝</small></div><div class="t-body"><h3>おはようございます</h3><p>それぞれのペースで起床。お着替えや洗顔・整髪をお手伝いし、気持ちよく一日を始めます。（夜間も定時に見守りを行っています）</p></div></div>
-      <div class="t-item"><div class="t-time">7:00<small>朝食</small></div><div class="t-body"><h3>みんなで食卓を囲む</h3><p>朝食のあとは口腔ケアやお薬の確認まで丁寧に。健康を毎日しっかり見守ります。</p></div></div>
-      <div class="t-item"><div class="t-time">9:00<small>午前</small></div><div class="t-body"><h3>健康チェックと散歩</h3><p>血圧・脈・体温を測り、その日の体調を確認。天気のいい日はお散歩に出て、外の空気を楽しみます。</p></div></div>
-      <div class="t-item"><div class="t-time">12:00<small>昼食</small></div><div class="t-body"><h3>お昼ごはん・お昼寝</h3><p>昼食後はゆっくり休憩。食後のお薬もこちらで管理します。</p></div></div>
-      <div class="t-item"><div class="t-time">14:00<small>午後</small></div><div class="t-body"><h3>体操・脳トレ・入浴</h3><p>軽い体操や脳トレで頭と体を動かし、順番に入浴を。さっぱりして午後のおやつの時間へ。</p></div></div>
-      <div class="t-item"><div class="t-time">15:00<small>おやつ</small></div><div class="t-body"><h3>お茶とおしゃべり</h3><p>お茶を飲みながらのおしゃべりや、みんなで歌う時間。いちばんにぎやかなひとときです。</p></div></div>
-      <div class="t-item"><div class="t-time">18:00<small>夕食</small></div><div class="t-body"><h3>一日おつかれさまでした</h3><p>夕食と口腔ケアのあと、パジャマにお着替え。ぐっすり眠れるよう、それぞれの就寝を見守ります。</p></div></div>
+      <div class="t-item"><div class="t-time">6:00<small>朝</small></div><div class="t-body"><h3>起床・洗顔・排泄</h3><p>それぞれのペースで起床。洗顔や整容をお手伝いし、気持ちよく一日を始めます。（夜間も定時に見守りを行っています）</p></div></div>
+      <div class="t-item"><div class="t-time">7:30<small>朝食</small></div><div class="t-body"><h3>朝食</h3><p>みんなで食卓を囲んで、朝ごはん。一日の始まりをゆっくりと。</p></div></div>
+      <div class="t-item"><div class="t-time">8:00<small>朝</small></div><div class="t-body"><h3>口腔ケア</h3><p>食後はお口のケアを丁寧に。お薬の確認も行います。</p></div></div>
+      <div class="t-item"><div class="t-time">9:00<small>午前</small></div><div class="t-body"><h3>バイタル測定</h3><p>血圧・脈・体温を測り、その日の体調を確認します。</p></div></div>
+      <div class="t-item"><div class="t-time">10:00<small>午前</small></div><div class="t-body"><h3>体操・散歩・入浴</h3><p>軽い体操やお散歩で体を動かし、順番に入浴を。天気のいい日は外の空気も楽しみます。</p></div></div>
+      <div class="t-item"><div class="t-time">12:30<small>昼食</small></div><div class="t-body"><h3>昼食・口腔ケア</h3><p>お昼ごはんのあとは、お口のケアまでしっかりと。</p></div></div>
+      <div class="t-item"><div class="t-time">13:00<small>午後</small></div><div class="t-body"><h3>入浴</h3><p>午後もゆっくり、順番に入浴の時間です。</p></div></div>
+      <div class="t-item"><div class="t-time">15:00<small>おやつ</small></div><div class="t-body"><h3>おやつ</h3><p>お茶とおやつで、ほっと一息。おしゃべりも弾みます。</p></div></div>
+      <div class="t-item"><div class="t-time">16:00<small>午後</small></div><div class="t-body"><h3>レクリエーション</h3><p>歌やゲーム、季節の行事など。みんなで楽しむ時間です。</p></div></div>
+      <div class="t-item"><div class="t-time">17:30<small>夕食</small></div><div class="t-body"><h3>夕食・口腔ケア</h3><p>一日の終わりに、夕食とお口のケアを。</p></div></div>
+      <div class="t-item"><div class="t-time">18:00<small>夜</small></div><div class="t-body"><h3>就寝準備・消灯</h3><p>お着替えを済ませ、就寝の準備。ぐっすり眠れるよう、それぞれの就寝を見守ります。</p></div></div>
     </div>
   </div>
 </section>
@@ -395,9 +399,6 @@
           <li>未経験・ブランクのある方も、勤務時間・シフトはご相談可</li>
         </ul>
         <a class="btn" href="#contact">採用について問い合わせる</a>
-      </div>
-      <div class="recruit-photo">
-          <span>働くスタッフの写真</span>
       </div>
     </div>
   </div>
