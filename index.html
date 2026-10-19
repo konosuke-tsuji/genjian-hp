@@ -129,6 +129,10 @@
   .price-total .lbl{font-family:"BIZ UDPMincho",serif;font-weight:700;color:var(--ink)}
   .price-total .lbl small{display:block;font-family:"BIZ UDPGothic";font-size:.7rem;color:var(--sub);font-weight:400;margin-top:4px}
   .price-total b{font-family:"BIZ UDPGothic",sans-serif;font-weight:700;font-size:1.55rem;color:var(--accent-2)}
+  .sim-controls{display:flex;gap:12px;flex-wrap:wrap;margin:10px 0 16px}
+  .sim-controls label{flex:1;min-width:130px;font-size:.78rem;color:var(--sub);font-weight:600;display:flex;flex-direction:column;gap:6px}
+  .sim-controls select{font-family:inherit;font-size:1rem;padding:11px 12px;border:1px solid var(--line);border-radius:7px;background:var(--paper);color:var(--ink);font-weight:600;cursor:pointer}
+  .sim-controls select:focus{outline:none;border-color:var(--accent)}
   .note{font-size:.78rem;color:var(--sub);margin-top:18px;line-height:1.8}
   .steps{display:flex;flex-direction:column}
   .step{display:grid;grid-template-columns:44px 1fr;gap:18px;padding:18px 0;border-bottom:1px dashed var(--line)}
@@ -331,18 +335,38 @@
         <h3>月額利用料の目安</h3>
         <div class="price-group">① 生活にかかる実費 <small>要介護度に関わらず共通</small></div>
         <div class="price-row"><span>家賃</span><span>50,000円</span></div>
-        <div class="price-row"><span>水道光熱費</span><span>12,493円</span></div>
-        <div class="price-row"><span>食材費（1日約1,580円）</span><span>49,104円</span></div>
-        <div class="price-sub"><span>実費 小計</span><span>111,597円</span></div>
-        <div class="price-group">② 介護保険の自己負担分 <small>要介護度・所得で変動</small></div>
-        <div class="price-row"><span>要介護2・1割負担の場合（各種加算含む）</span><span>約30,551円</span></div>
+        <div class="price-row"><span>水道光熱費（1日403円）</span><span>12,090円</span></div>
+        <div class="price-row"><span>食材費（1日1,584円）</span><span>47,520円</span></div>
+        <div class="price-sub"><span>実費 小計</span><span>109,610円</span></div>
+        <div class="price-group">② 介護保険の自己負担分 <small>かんたんシミュレーション</small></div>
+        <div class="sim-controls">
+          <label>要介護度
+            <select id="simCare">
+              <option value="yoshien2">要支援2</option>
+              <option value="care1">要介護1</option>
+              <option value="care2" selected>要介護2</option>
+              <option value="care3">要介護3</option>
+              <option value="care4">要介護4</option>
+              <option value="care5">要介護5</option>
+            </select>
+          </label>
+          <label>自己負担割合
+            <select id="simRate">
+              <option value="1" selected>1割</option>
+              <option value="2">2割</option>
+              <option value="3">3割</option>
+            </select>
+          </label>
+        </div>
+        <div class="price-row"><span>介護保険の自己負担（各種加算含む）</span><span id="simCareFee">約30,196円</span></div>
         <div class="price-total">
-          <span class="lbl">合計の目安<small>要介護2・1割負担の方の場合</small></span>
-          <b>約142,000円</b>
+          <span class="lbl">合計の目安（月額）<small id="simLabel">要介護2・1割負担の方の場合</small></span>
+          <b id="simTotal">約139,806円</b>
         </div>
         <p class="note">
-          ※介護保険の自己負担分は、要介護度や所得（1〜3割負担）により変わります。2割・3割負担の場合は総額が月17〜20万円程度になることがあります。<br>
-          ※このほか、医療費・薬代、おむつ等の消耗品、理美容代、福祉用具レンタル代などは別途実費となります。
+          ※「①実費＋②介護保険の自己負担」の月額目安です。ひと月を30日として計算しています（31日の月は実費が少し増えます）。<br>
+          ※介護保険の自己負担分は、要介護2を実額、その他の要介護度は国の基準単位（認知症対応型共同生活介護費・2024年度）に基づく概算です。加算の状況・所得区分・月の日数により多少前後します。<br>
+          ※このほか、医療費・薬代、おむつ等の消耗品、理美容代、福祉用具レンタル代などは別途実費です。生活保護を受給の方などは自己負担が異なります。詳しくはお気軽にお問い合わせください。
         </p>
       </div>
       <div class="steps">
@@ -512,6 +536,32 @@
   document.getElementById('confirmSend').addEventListener('click', function(){
     confirmed=true; modal.style.display='none'; form.submit();
   });
+})();
+</script>
+<script>
+(function(){
+  var careSel=document.getElementById('simCare');
+  var rateSel=document.getElementById('simRate');
+  if(!careSel||!rateSel) return;
+  // 要介護度ごとの「介護保険 自己負担（1割・月額・各種加算含む）」
+  // 要介護2は手書き料金表の実額。他は国の基準単位(認知症対応型共同生活介護費・2024年度)で按分した概算。
+  var fee1={yoshien2:28851, care1:28989, care2:30196, care3:30988, care4:31540, care5:32161};
+  var names={yoshien2:'要支援2', care1:'要介護1', care2:'要介護2', care3:'要介護3', care4:'要介護4', care5:'要介護5'};
+  var jisshi=109610; // ①実費小計（30日）
+  var feeEl=document.getElementById('simCareFee');
+  var totalEl=document.getElementById('simTotal');
+  var labelEl=document.getElementById('simLabel');
+  function yen(n){ return '約'+n.toLocaleString('ja-JP')+'円'; }
+  function update(){
+    var care=careSel.value, rate=parseInt(rateSel.value,10);
+    var fee=fee1[care]*rate;
+    feeEl.textContent=yen(fee);
+    totalEl.textContent=yen(fee+jisshi);
+    labelEl.textContent=names[care]+'・'+rate+'割負担の方の場合';
+  }
+  careSel.addEventListener('change',update);
+  rateSel.addEventListener('change',update);
+  update();
 })();
 </script>
 </body>
